@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ChangePhoneNumberWindowController" customModule="ShadowsocksX_NG" customModuleProvider="target">
+            <connections>
+                <outlet property="actProcessIndicator" destination="MA3-LA-Tw4" id="mA5-VY-ePa"/>
+                <outlet property="bgProcessIndicator" destination="i4Q-UF-ate" id="F9G-OZ-rFz"/>
+                <outlet property="btnConfirm" destination="oUi-aF-5JB" id="mmO-Uv-01p"/>
+                <outlet property="btnSendCode" destination="ken-r2-DpF" id="18x-Qs-lG8"/>
+                <outlet property="tfPhoneOrEmail" destination="i8G-Eh-HD7" id="T9N-N4-Eb0"/>
+                <outlet property="tfVerificationCode" destination="Fms-c7-HiQ" id="zKk-rb-LpZ"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Change Phone Number" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="caK-QS-mgv">
+                        <rect key="frame" x="18" y="233" width="444" height="17"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Please enter the original phone number/email" id="s4t-GK-fZP">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-Eh-HD7">
+                        <rect key="frame" x="20" y="195" width="440" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="R5Y-Dn-1rQ"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="4Ci-MI-As8">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-wZ-cax">
+                        <rect key="frame" x="18" y="108" width="444" height="17"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Verification Code" id="S0j-s1-jEy">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ken-r2-DpF">
+                        <rect key="frame" x="359" y="153" width="107" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Cj4-d3-Uct"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Send Code" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cgf-0B-meR">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="actSendCode:" target="-2" id="YHJ-nE-3mI"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fms-c7-HiQ">
+                        <rect key="frame" x="20" y="70" width="440" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="GzO-Xo-lzc"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="2NV-GG-eBa">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="KBC-AK-tTQ"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-aF-5JB">
+                        <rect key="frame" x="377" y="28" width="89" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="V17-CF-RVk"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Confirm" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kPl-bp-uBE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="actConfirm:" target="-2" id="Htd-3d-glh"/>
+                        </connections>
+                    </button>
+                    <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4Q-UF-ate">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <subviews>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="MA3-LA-Tw4">
+                                <rect key="frame" x="224" y="119" width="32" height="32"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="MA3-LA-Tw4" firstAttribute="centerY" secondItem="i4Q-UF-ate" secondAttribute="centerY" id="C6r-DC-e0b"/>
+                            <constraint firstItem="MA3-LA-Tw4" firstAttribute="centerX" secondItem="i4Q-UF-ate" secondAttribute="centerX" id="QN3-cw-gEU"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="i4Q-UF-ate" secondAttribute="bottom" id="7WY-XN-Cyd"/>
+                    <constraint firstItem="i8G-Eh-HD7" firstAttribute="top" secondItem="caK-QS-mgv" secondAttribute="bottom" constant="10" id="9GM-Y2-29t"/>
+                    <constraint firstItem="QF7-wZ-cax" firstAttribute="leading" secondItem="caK-QS-mgv" secondAttribute="leading" id="BXH-fo-D13"/>
+                    <constraint firstItem="QF7-wZ-cax" firstAttribute="top" secondItem="ken-r2-DpF" secondAttribute="bottom" constant="35" id="I21-sp-9Rw"/>
+                    <constraint firstItem="caK-QS-mgv" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Kga-ek-qbr"/>
+                    <constraint firstItem="caK-QS-mgv" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="Ko3-Bx-itc"/>
+                    <constraint firstItem="oUi-aF-5JB" firstAttribute="top" secondItem="Fms-c7-HiQ" secondAttribute="bottom" constant="10" id="Loy-3O-gP7"/>
+                    <constraint firstItem="ken-r2-DpF" firstAttribute="trailing" secondItem="i8G-Eh-HD7" secondAttribute="trailing" id="MJ9-wt-EEG"/>
+                    <constraint firstItem="Fms-c7-HiQ" firstAttribute="trailing" secondItem="i8G-Eh-HD7" secondAttribute="trailing" id="O3E-1w-iHe"/>
+                    <constraint firstItem="i8G-Eh-HD7" firstAttribute="leading" secondItem="caK-QS-mgv" secondAttribute="leading" id="Q0X-km-Yma"/>
+                    <constraint firstItem="ken-r2-DpF" firstAttribute="top" secondItem="i8G-Eh-HD7" secondAttribute="bottom" constant="10" id="SeR-B3-pLP"/>
+                    <constraint firstAttribute="trailing" secondItem="caK-QS-mgv" secondAttribute="trailing" constant="20" id="TOf-DD-xyO"/>
+                    <constraint firstItem="Fms-c7-HiQ" firstAttribute="leading" secondItem="i8G-Eh-HD7" secondAttribute="leading" id="avH-sk-ykf"/>
+                    <constraint firstItem="QF7-wZ-cax" firstAttribute="trailing" secondItem="caK-QS-mgv" secondAttribute="trailing" id="c5K-MO-YcG"/>
+                    <constraint firstAttribute="trailing" secondItem="i4Q-UF-ate" secondAttribute="trailing" id="dVE-2L-MTM"/>
+                    <constraint firstItem="i8G-Eh-HD7" firstAttribute="trailing" secondItem="caK-QS-mgv" secondAttribute="trailing" id="eSm-de-qT4"/>
+                    <constraint firstItem="oUi-aF-5JB" firstAttribute="trailing" secondItem="ken-r2-DpF" secondAttribute="trailing" id="ir4-UI-ETY"/>
+                    <constraint firstItem="i4Q-UF-ate" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="sfx-kJ-I5o"/>
+                    <constraint firstItem="Fms-c7-HiQ" firstAttribute="top" secondItem="QF7-wZ-cax" secondAttribute="bottom" constant="10" id="ueN-mn-sRP"/>
+                    <constraint firstItem="i4Q-UF-ate" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="wpd-IE-bdE"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="147"/>
+        </window>
+    </objects>
+</document>

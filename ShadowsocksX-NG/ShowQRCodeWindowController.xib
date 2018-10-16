@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ShowQRCodeWindowController" customModule="ShadowsocksX_NG" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="kL7-rX-j9N" id="299-XD-0lo"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="270" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kL7-rX-j9N">
+                        <rect key="frame" x="20" y="20" width="230" height="230"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kL7-rX-j9N" secondAttribute="height" multiplier="1:1" id="blv-tE-S1L"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="taB-wJ-Ea3"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="kL7-rX-j9N" secondAttribute="bottom" constant="20" id="2P7-en-dlV"/>
+                    <constraint firstItem="kL7-rX-j9N" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="gcF-AZ-qrz"/>
+                    <constraint firstItem="kL7-rX-j9N" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="ip6-qp-ew5"/>
+                    <constraint firstAttribute="trailing" secondItem="kL7-rX-j9N" secondAttribute="trailing" constant="20" id="wLt-LD-bWS"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+</document>

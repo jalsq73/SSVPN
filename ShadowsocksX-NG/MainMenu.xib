@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Master_VPN" customModuleProvider="target">
+            <connections>
+                <outlet property="menuItemBindOrBarcode" destination="a4K-mq-K4D" id="l2I-FO-Gqz"/>
+                <outlet property="menuItemChangePassword" destination="U4Y-ph-o7x" id="zes-mg-8F8"/>
+                <outlet property="menuItemPuchaseHistory" destination="Jwp-Bw-0Qr" id="ycK-mE-tbc"/>
+                <outlet property="menuItemSmartMode" destination="r07-Gu-aEz" id="bqs-jF-99Y"/>
+                <outlet property="menuItemStatus" destination="YoX-mv-Wil" id="n2s-N6-J3p"/>
+                <outlet property="menuItemVipSecurityCenter" destination="Xnd-GS-erB" id="oQW-zN-Lhs"/>
+                <outlet property="runningStatusMenuItem" destination="fzk-mE-CEV" id="Vwm-Rg-Ykn"/>
+                <outlet property="scanQRCodeMenuItem" destination="Qe6-bF-paT" id="XHa-pa-nCa"/>
+                <outlet property="serverMenuItem" destination="LgB-6g-Gba" id="0B1-BO-cN1"/>
+                <outlet property="statusMenu" destination="Hob-KD-bx9" id="clA-ZW-0pT"/>
+                <outlet property="toggleRunningMenuItem" destination="GSu-Tf-StS" id="XHw-pU-nCa"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="RVPN" autoenablesItems="NO" id="Hob-KD-bx9">
+            <items>
+                <menuItem title="VPN: On" enabled="NO" id="fzk-mE-CEV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Turn VPN On" id="GSu-Tf-StS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggleRunning:" target="Voe-Tx-rLC" id="EvE-23-Wiv"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="LXP-yK-yQu"/>
+                <menuItem title="Account" id="Vcl-du-0ja">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Account" autoenablesItems="NO" id="4my-le-ra5">
+                        <items>
+                            <menuItem title="Free" enabled="NO" id="YoX-mv-Wil">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="VIP Security Center" id="Xnd-GS-erB">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="actVipSecurityCenter:" target="Voe-Tx-rLC" id="3ib-zl-Vbz"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Change Password" id="U4Y-ph-o7x">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="actChangePassword:" target="Voe-Tx-rLC" id="8ok-LX-DOD"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Purchase History" id="Jwp-Bw-0Qr">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="actPurchaseHistory:" target="Voe-Tx-rLC" id="0GY-Hj-TJm"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="TdT-tF-tj1"/>
+                <menuItem title="Smart Mode On" tag="1" id="r07-Gu-aEz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="actSmartMode:" target="Voe-Tx-rLC" id="10p-7c-Rh0"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Server" id="LgB-6g-Gba">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAbout:" target="Voe-Tx-rLC" id="ToP-D0-suY"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="BMf-0T-UcX"/>
+                <menuItem title="Scan QR Code From Screen" hidden="YES" id="Qe6-bF-paT">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="scanQRCodeFromScreen:" target="Voe-Tx-rLC" id="zQZ-IT-H4a"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" hidden="YES" id="lSf-ni-kjo"/>
+                <menuItem title="Buy" id="ar1-Y9-ckS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="actBuy:" target="Voe-Tx-rLC" id="nKT-il-ge8"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="wiv-P6-NZU"/>
+                <menuItem title="Login" tag="1" enabled="NO" id="a4K-mq-K4D">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="actionLoginShowQR:" target="Voe-Tx-rLC" id="eMx-HE-b7a"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" keyEquivalent="q" id="vJS-JW-byz">
+                    <connections>
+                        <action selector="terminate:" target="-2" id="Mrp-4z-omR"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-2306" y="-92"/>
+        </menu>
+    </objects>
+</document>

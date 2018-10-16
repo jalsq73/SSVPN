@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LoginWindowController" customModule="ShadowsocksX_NG" customModuleProvider="target">
+            <connections>
+                <outlet property="actIndicator" destination="QKk-Fg-Lqs" id="6Ca-9A-ljL"/>
+                <outlet property="bgProcessIndicator" destination="z5h-n5-hI6" id="meh-Bd-lGK"/>
+                <outlet property="tfPassword" destination="0Ze-xl-879" id="n3v-w8-YDB"/>
+                <outlet property="tfUserName" destination="5NC-gP-9cc" id="Yaq-3E-frd"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="326" height="230"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="230"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CTX-RU-qAq">
+                        <rect key="frame" x="18" y="193" width="290" height="17"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="UserName" id="ogm-Kb-kVj">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5NC-gP-9cc">
+                        <rect key="frame" x="20" y="161" width="286" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Jhd-Ks-KDE">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-xl-879">
+                        <rect key="frame" x="20" y="82" width="286" height="22"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="KVw-0b-7wG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4yU-yd-bal">
+                        <rect key="frame" x="126" y="19" width="74" height="32"/>
+                        <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8OD-7K-EAQ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="actLogin:" target="-2" id="wbu-1F-E4d"/>
+                        </connections>
+                    </button>
+                    <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5h-n5-hI6">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="230"/>
+                        <subviews>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="QKk-Fg-Lqs">
+                                <rect key="frame" x="147" y="99" width="32" height="32"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QKk-Fg-Lqs" firstAttribute="centerY" secondItem="z5h-n5-hI6" secondAttribute="centerY" id="h7n-DX-dGw"/>
+                            <constraint firstItem="QKk-Fg-Lqs" firstAttribute="centerX" secondItem="z5h-n5-hI6" secondAttribute="centerX" id="ueu-NF-l5J"/>
+                        </constraints>
+                    </customView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sZs-RQ-x3H">
+                        <rect key="frame" x="18" y="114" width="63" height="17"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Password" id="49G-5I-8KS">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4yU-yd-bal" firstAttribute="top" secondItem="0Ze-xl-879" secondAttribute="bottom" constant="35" id="5wQ-yW-mhA"/>
+                    <constraint firstItem="5NC-gP-9cc" firstAttribute="leading" secondItem="CTX-RU-qAq" secondAttribute="leading" id="7lO-Ay-YMt"/>
+                    <constraint firstAttribute="bottom" secondItem="z5h-n5-hI6" secondAttribute="bottom" id="Ela-NR-oie"/>
+                    <constraint firstAttribute="trailing" secondItem="z5h-n5-hI6" secondAttribute="trailing" id="Ja1-C1-wus"/>
+                    <constraint firstItem="5NC-gP-9cc" firstAttribute="trailing" secondItem="CTX-RU-qAq" secondAttribute="trailing" id="LAs-jo-m0M"/>
+                    <constraint firstItem="z5h-n5-hI6" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="MV6-u9-7QT"/>
+                    <constraint firstAttribute="trailing" secondItem="CTX-RU-qAq" secondAttribute="trailing" constant="20" id="PVl-z8-jpP"/>
+                    <constraint firstItem="z5h-n5-hI6" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="SRb-tL-AK0"/>
+                    <constraint firstItem="0Ze-xl-879" firstAttribute="leading" secondItem="sZs-RQ-x3H" secondAttribute="leading" id="XF5-kV-r3Q"/>
+                    <constraint firstItem="CTX-RU-qAq" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="YMI-Gk-4HN"/>
+                    <constraint firstItem="0Ze-xl-879" firstAttribute="top" secondItem="sZs-RQ-x3H" secondAttribute="bottom" constant="10" id="ZqQ-eN-8k2"/>
+                    <constraint firstItem="5NC-gP-9cc" firstAttribute="top" secondItem="CTX-RU-qAq" secondAttribute="bottom" constant="10" id="ak0-0D-U3p"/>
+                    <constraint firstItem="sZs-RQ-x3H" firstAttribute="top" secondItem="5NC-gP-9cc" secondAttribute="bottom" constant="30" id="akR-jm-VqO"/>
+                    <constraint firstItem="sZs-RQ-x3H" firstAttribute="leading" secondItem="CTX-RU-qAq" secondAttribute="leading" id="b2T-9M-rD4"/>
+                    <constraint firstItem="4yU-yd-bal" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="f79-sX-lAr"/>
+                    <constraint firstItem="0Ze-xl-879" firstAttribute="trailing" secondItem="5NC-gP-9cc" secondAttribute="trailing" id="fmJ-xg-C6q"/>
+                    <constraint firstItem="CTX-RU-qAq" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="gfE-Vo-OyS"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="116"/>
+        </window>
+    </objects>
+</document>
