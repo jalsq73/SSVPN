@@ -232,7 +232,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        ProxyConfHelper.install()
         _ = LaunchAtLoginController()// Ensure set when launch
         
         NSUserNotificationCenter.default.delegate = self
